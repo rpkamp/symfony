@@ -1060,6 +1060,10 @@ class Crawler implements \Countable, \IteratorAggregate
      */
     public function count()
     {
+        if (null === $this->nodes) {
+            return 0;
+        }
+
         return count($this->nodes);
     }
 
