@@ -720,6 +720,10 @@ HttpFoundation
    $request->query->get('foo')['bar'];
    ```
 
+ * Responses that have any cookies are no longer eligible for caching. This mainly
+   affects how `\Symfony\Component\HttpKernel\HttpCache\HttpCache` works, but might
+   affect third party code as well.
+
 Routing
 -------
 

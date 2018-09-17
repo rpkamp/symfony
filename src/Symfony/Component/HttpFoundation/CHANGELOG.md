@@ -6,6 +6,9 @@ CHANGELOG
 
  * Finding deep items in `ParameterBag::get()` is deprecated since version 2.8 and
    will be removed in 3.0.
+ * Responses that have any cookies are no longer eligible for caching. This mainly
+   affects how `\Symfony\Component\HttpKernel\HttpCache\HttpCache` works, but might
+   affect third party code as well.
 
 2.6.0
 -----

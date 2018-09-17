@@ -1907,6 +1907,11 @@ UPGRADE FROM 2.x to 3.0
    ```php
    $request->query->get('foo')['bar'];
    ```
+   
+ * Responses that have any cookies are no longer eligible for caching. This mainly
+   affects how `\Symfony\Component\HttpKernel\HttpCache\HttpCache` works, but might
+   affect third party code as well.
+
 ### Monolog Bridge
 
  * `Symfony\Bridge\Monolog\Logger::emerg()` was removed. Use `emergency()` which is PSR-3 compatible.
